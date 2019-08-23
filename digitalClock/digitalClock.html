@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <li style="text-decoration: none">
+      <a href="#" id="time">00:00</a>
+    </li>
+  </body>
+  <script>
+    var element = document.getElementById("time");
+    var sec = 00;
+    var min = 00;
+    var hr = 00;
+    clock();
+    function clock() {
+      if (sec < 60) {
+        sec++;
+      } else if (sec == 60 && min < 60) {
+        sec = 00;
+        min++;
+      } else if (min == 60 && hr < 60) {
+        min == 00;
+        hr++;
+      } else if (hr == 60) {
+        return 0;
+      }
+
+      sec = checkTime(sec);
+      element.innerHTML = hr + ":" + min + ":" + sec;
+
+      var timer = setTimeout(function() {
+        clock();
+      }, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+  </script>
+</html>

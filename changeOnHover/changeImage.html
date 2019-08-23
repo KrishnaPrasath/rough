@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      img {
+        max-width: 20rem;
+        max-height: 20rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="holder">
+      <img id="imgHolder" src="images/0.jpg" alt="images" />
+    </div>
+  </body>
+  <script>
+    var element = document.getElementById("imgHolder");
+    var fun;
+    var source = [
+      //   "/images/0.jpg",
+      "images/1.jpeg",
+      "images/2.jpg",
+      "images/3.jpg",
+      "images/4.jpg",
+      "images/5.jpeg",
+      "images/0.jpg"
+    ];
+    element.addEventListener("mouseover", function() {
+      fun = setInterval(function() {
+        var i = Math.floor(Math.random() * source.length);
+        element.src = source[i];
+      }, 1000);
+    });
+
+    element.addEventListener("mouseout", function() {
+      clearInterval(fun);
+    });
+  </script>
+</html>
