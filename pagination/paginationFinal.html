@@ -571,7 +571,7 @@
       function clicked(id) {
         console.log(id);
         console.log(list1[id]);
-        element.innerHTML = "";
+        element.innerText = "";
         let grandTotal = id * limit;
         for (var i = grandTotal - limit; i < grandTotal; i++) {
           document.getElementById("loop").innerHTML +=
