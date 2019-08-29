@@ -10,13 +10,40 @@
       href="C:\Program Files\bootstrap-4.3.1-dist\css\bootstrap.css"
     />
     <script type="text/javascript" src="webAPI.js"></script>
+    <style>
+      #main {
+        margin: 0.5rem;
+      }
+      #search {
+        width: 50%;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
-    <div id="main">
-      <input id="ip" type="text" placeholder="Enter the city name : " />
-      <button id="check">Check</button>
-    </div>
+    <div id="main"></div>
     <div id="sub" class="container ">
+      <!-- <input
+        id="ip"
+        class="form"
+        type="text"
+        placeholder="Enter the city name : "
+      /> -->
+      <div id="search" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input
+          id="ip"
+          type="text"
+          class="form-control small"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+        <button class="btn" id="check">Check</button>
+      </div>
+
       <div id="loop" class="list-group ">
         <li id="disp" class="list-group-item ">
           <a href="#"> </a>
