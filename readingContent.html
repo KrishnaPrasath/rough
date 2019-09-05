@@ -12,22 +12,21 @@ complete: About 30 minutes. started @15.34 finished @ -->
   <body>
     <input id="email" type="email" placeholder="Enter email" />
     <input id="pw" type="password" placeholder="Enter password" />
-    <button type="submit" onclick="validate()">submit</button>
+    <button type="submit" onsubmit="validate()">submit</button>
     <script>
+      var ip1 = document.getElementById("email").innerText;
       var ip2 = document.getElementById("pw").innerText;
-
-      var emailPattern = /\w+@\w+\.(com|org|in)/g;
-
+      var emailPattern = /(\w)+@(\w)+\.(\w)+/g;
+      // var pwPatter = ;
       function validate() {
-        var ip1 = document.getElementById("email").value;
-
-        var res = ip1.match(emailPattern);
-
-        if (res) {
-          alert(res + "success");
-        } else {
-          alert(res + "fail");
-        }
+        console.log("fun started");
+        var result = ip1.match(emailPattern);
+        // if (result === null) {
+        //   console.log("not found");
+        // } else {
+        //   console.log("Success" + result);
+        // }
+        console.log(result);
       }
     </script>
   </body>

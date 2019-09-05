@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="C:\Program Files\bootstrap-4.3.1-dist\css\bootstrap.css"
+    />
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button onclick="change()">CHANGE</button>
+    <textarea name="output" id="op" cols="30" rows="10"></textarea>
+    <script>
+      var xttp = new XMLHttpRequest();
+      var xmlDoc = xttp.responseXML;
+      var response;
+      var regEx = /\w+@\w+\.\w+/g;
+      var textArea = document.getElementById("op");
+      window.onload = function() {
+        xttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            response = xttp.responseText;
+            console.log(response);
+          }
+        };
+        xttp.open("GET", "https://api.myjson.com/bins/hxcin", true);
+        xttp.send();
+      };
+      // var change = function() {
+      //   var str = response;
+      //   if (response.match(regEx)) {
+      //     console.log("true");
+      //     textArea.innerHTML += response.match(regEx);
+      //   }
+      // };
+      // using RegExp
+      // var regexp = new RegExp(input);
+      var change = function() {
+        textArea.innerHTML = "";
+        var input = document.getElementById("input").value;
+        var regexp = new RegExp(input, "g");
+        var str = response;
+        if (response.match(regexp)) {
+          console.log("true");
+          console.log(response.match(regexp));
+          textArea.innerHTML += response.match(regexp);
+        }
+      };
+    </script>
+  </body>
+</html>
+<!-- https://github.com/KrishnaPrasath/jsondata/blob/master/pagenation.json -->
