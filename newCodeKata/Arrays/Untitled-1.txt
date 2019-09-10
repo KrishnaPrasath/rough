@@ -1,0 +1,13 @@
+== vs ===
+logical and & or
+bitwise and & or
+IIFE
+Objects
+Adding arrays
+toString & valueof
+call implicit and explicit
+hoisting
+Apply vs call
+debugger
+Bind()
+coertion
