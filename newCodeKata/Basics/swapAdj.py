@@ -5,7 +5,7 @@
 # 3 2 1 2 3
 # OUTPUT
 # 2 3 2 1 3
-
+#done but no points - #basic
 
 def swapAdjacent(N, arr):
     for i in range(1, N+1, 2):
