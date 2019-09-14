@@ -1,3 +1,4 @@
+# scalene triangle
 # done
 a, b, c = map(int, input().split())
 

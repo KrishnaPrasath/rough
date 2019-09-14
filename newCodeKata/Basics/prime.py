@@ -14,5 +14,3 @@ N = int(input())
 #     print("No")
 # else:
 #     print("Yes")
-a = 3.0
-b = 
