@@ -1,6 +1,5 @@
-N = 4
-K = 3
-arr = [3, 3, 3, 4]
+N , K = map(int,input().split())
+arr = list(map(int,input().split()))
 count = 0
 
 for i in arr:
