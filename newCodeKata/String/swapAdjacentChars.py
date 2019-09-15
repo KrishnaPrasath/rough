@@ -6,7 +6,7 @@
 # OUTPUT
 # ocedakat
 
-string = 'kabali'
+string = input()
 lis = []
 result = ''
 for each in string:
